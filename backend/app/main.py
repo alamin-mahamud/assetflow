@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-from app.api import auth, accounts, transactions, investments, gold, reports, zakat
+from app.api import auth, accounts, transactions, investments, reports, zakat, interest, gold
 
 app = FastAPI(title=settings.APP_NAME, version="1.0.0")
 
@@ -21,6 +21,7 @@ app.include_router(investments.router)
 app.include_router(gold.router)
 app.include_router(reports.router)
 app.include_router(zakat.router)
+app.include_router(interest.router)
 
 
 @app.get("/health")
