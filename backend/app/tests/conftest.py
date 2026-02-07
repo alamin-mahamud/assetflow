@@ -8,7 +8,6 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 
 from app.core.config import settings
 from app.core.database import Base, get_db
-from app.core.security import create_access_token
 from app.main import app
 
 TEST_DATABASE_URL = settings.DATABASE_URL.replace("/assetflow", "/assetflow_test")

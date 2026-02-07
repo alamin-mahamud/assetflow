@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-from app.api import auth, accounts, transactions, investments, reports, zakat, interest, gold
+from app.api import auth, accounts, transactions, investments, gold, reports, zakat, interest
 
 app = FastAPI(title=settings.APP_NAME, version="1.0.0")
 
